@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+mainClassName = 'hello.HelloWorld'
+
+dependencies {
+    compile ('io.dropwizard:dropwizard-core:0.7.1')
+
+    testCompile (
+        'junit:junit:4.11',
+        'com.github.tomakehurst:wiremock:1.57'
+    )
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
