@@ -10,7 +10,7 @@ public class HelloWorldConfiguration extends Configuration{
     private String template;
 
     @NotEmpty
-    private String defaultValue = "Stranger";
+    private String defaultName = "Stranger";
 
     @JsonProperty
     public String getTemplate() {
@@ -23,12 +23,12 @@ public class HelloWorldConfiguration extends Configuration{
     }
 
     @JsonProperty
-    public String getDefaultValue() {
-        return defaultValue;
+    public String getdefaultName() {
+        return defaultName;
     }
 
     @JsonProperty
-    public void setDefaultValue(String defaultValue) {
-        this.defaultValue = defaultValue;
+    public void setdefaultName(String defaultName) {
+        this.defaultName = defaultName;
     }
 }
